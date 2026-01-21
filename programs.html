@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Our Programs | Zoe Life Academy for Kidz</title>
+    <link rel="icon" type="image/jpeg" href="images/Zoe-Life-academy-logo.jpg">
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@300;400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <!-- Header & Navigation -->
+    <header>
+        <div class="container">
+            <a href="index.html" class="logo-link">
+                <img src="images/Zoe-Life-academy-logo.jpg" alt="Zoe Life Academy for Kidz Logo" class="logo">
+            </a>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="programs.html" class="active">Programs</a></li>
+                    <li><a href="admissions.html">Admissions</a></li>
+                    <li><a href="resources.html">Parent Resources</a></li>
+                    <li><a href="neurodivergent-test.html">Neurodivergent Test</a></li>
+                    <li><a href="contact.html">Contact Us</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Main Content for Programs Page -->
+    <main class="programs-page">
+        <section class="page-header programs-header">
+            <div class="carousel" aria-hidden="true">
+                <div class="slide"><img src="images/performance.jpg" alt="Children performance"></div>
+                <div class="slide"><img src="images/class_picture.jpg" alt="Classroom picture"></div>
+                <div class="slide"><img src="images/fun_run.jpg" alt="Fun run event"></div>
+            </div>
+            <div class="container">
+                <h1>Our Programs</h1>
+            </div>
+        </section>
+
+        <!-- Programs Grid Section -->
+        <section class="programs-grid">
+            <div class="container">
+                <!-- Program Card 1: Childcare & Potty-training -->
+                <div class="program-card">
+                    <img src="images/potty-training.JPG" alt="Young children in a safe and caring environment">
+                    <div class="program-info">
+                        <h2>Childcare & Potty-training Group</h2>
+                        <span class="age-range">0 - 3 years</span>
+                        <p>This program focuses on providing a nurturing and secure environment where toddlers can explore, learn, and grow while receiving gentle guidance in potty-training.</p>
+                               <h3>Fee Structure:</h3>
+                        <p class="fee-note">Termly and annual payment options are available for Childcare & Potty-training groups. Please inquire for detailed breakdowns.</p>
+                    </div>
+                </div>
+
+                <!-- Program Card 2: Preschool Group -->
+                <div class="program-card">
+                    <img src="images/IMG-20220309-WA0036.jpg" alt="Preschool children learning letters and numbers">
+                    <div class="program-info">
+                        <h2>Preschool Group</h2>
+                        <span class="age-range">4 - 6 years</span>
+                        <p>Our preschool curriculum is designed to build a strong foundation for formal schooling, focusing on kindergarten readiness, social skills, and a love for learning.</p>
+                        <h3>Fee Structure:</h3>
+                        <p class="fee-note">Termly and annual payment options are available for all preschool plans. Please inquire for detailed breakdowns.</p>
+                    </div>
+                </div>
+
+                <!-- Program Card 3: Neurodivergent Group -->
+                <div class="program-card">
+                    <img src="images/Nerodivergent-program.jpeg" alt="Neurodivergent support program">
+                    <div class="program-info">
+                        <h2>Neurodivergent Group</h2>
+                        <span class="age-range">3 - 7 years</span>
+                        <p>Specialized support for neurodivergent children including those with autism, ADHD, and other learning differences. We provide individualized strategies, sensory-friendly activities, and personalized learning approaches to help each child thrive.</p>
+                        <h3>Fee Structure:</h3>
+                        <p class="fee-note">Termly and annual payment options are available. Please inquire for detailed breakdowns.</p>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+    </main>
+
+    <script>
+    (function(){
+        const slides = document.querySelectorAll('.page-header .carousel .slide');
+        if(!slides || slides.length === 0) return;
+        let current = 0;
+        const show = i => {
+            slides.forEach(s=>s.classList.remove('active'));
+            slides[i].classList.add('active');
+        };
+        // Preload images
+        slides.forEach(s=>{
+            const img = s.querySelector('img'); if(img){ const i = new Image(); i.src = img.src; }
+        });
+        setInterval(()=>{
+            current = (current + 1) % slides.length;
+            show(current);
+        }, 4500);
+    })();
+    </script>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-contact">
+                <h3>Contact Us</h3>
+                <p>
+                    No. 287 Eeufees Street<br>
+                    Pretoria North
+                </p>
+                <p>
+                    <strong>Email:</strong> 
+                    <a href="mailto:zoelifeacademy4kidz@gmail.com">zoelifeacademy4kidz@gmail.com</a>
+                </p>
+                <p>
+                    <strong>Cell/WhatsApp:</strong> 
+                    <a href="tel:0839478372">083 947 8372</a>
+                </p>
+            </div>
+            <div class="footer-links">
+                <h3>Quick Links</h3>
+                <ul>
+                    <li><a href="admissions.html">Admissions Process</a></li>
+                    <li><a href="resources.html">School Calendar</a></li>
+                    <li><a href="documents/2026%20Welcome%20Pack.docx" download="2026 Welcome Pack.docx">Parent Handbook</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 Zoe Life Academy for Kidz. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+</body>
+</html>

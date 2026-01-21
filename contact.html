@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us | Zoe Life Academy for Kidz</title>
+    <link rel="icon" type="image/jpeg" href="images/Zoe Life academy logo.jpg">
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@300;400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <!-- Header & Navigation -->
+    <header>
+        <div class="container">
+            <a href="index.html" class="logo-link">
+                <img src="images/Zoe Life academy logo.jpg" alt="Zoe Life Academy for Kidz Logo" class="logo">
+            </a>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="programs.html">Programs</a></li>
+                    <li><a href="admissions.html">Admissions</a></li>
+                    <li><a href="resources.html">Parent Resources</a></li>
+                    <li><a href="neurodivergent-test.html">Neurodivergent Test</a></li>
+                    <li><a href="contact.html" class="active">Contact Us</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Main Content for Contact Page -->
+    <main class="contact-page">
+        <section class="page-header contact-header">
+            <div class="container">
+                <h1>Get in Touch</h1>
+            </div>
+        </section>
+
+        <section class="contact-info-map">
+            <div class="container">
+                <div class="contact-details">
+                    <h2>We'd Love to Hear From You</h2>
+                    <p>Whether you have a question, want to schedule a tour, or begin the enrollment process, our team is here to help. Reach out to us through any of the methods below.</p>
+                    
+                    <div class="info-item">
+                        <h3>Our Address</h3>
+                        <p>No. 287 Eeufees Street, Pretoria North</p>
+                    </div>
+                    
+                    <div class="info-item">
+                        <h3>Email Us</h3>
+                        <p><a href="mailto:zoelifeacademy4kidz@gmail.com">zoelifeacademy4kidz@gmail.com</a></p>
+                    </div>
+
+                        <div class="info-item">
+                            <h3>Call or WhatsApp</h3>
+                            <p><a href="tel:0839478372">083 947 8372</a></p>
+                        </div>
+
+                        <!-- Contact form with Web3Forms -->
+                        <div class="contact-form-wrapper">
+                            <h3>Send Us a Message</h3>
+                            <form id="contactForm" class="contact-form" action="https://api.web3forms.com/submit" method="POST">
+                                <input type="hidden" name="access_key" value="b52c5285-d1b4-4d8f-b8fe-091e0d375c39">
+                                
+                                <label for="name">Name</label>
+                                <input type="text" id="name" name="name" required>
+
+                                <label for="email">Email</label>
+                                <input type="email" id="email" name="email" required>
+
+                                <label for="subject">Subject</label>
+                                <input type="text" id="subject" name="subject">
+
+                                <label for="message">Message</label>
+                                <textarea id="message" name="message" rows="5" required></textarea>
+
+                                <button type="submit" class="cta-button">Send Message</button>
+                            </form>
+                            <div id="formMessage" style="display:none; margin-top:15px; padding:12px; border-radius:4px; text-align:center;"></div>
+                        </div>
+                    </div>
+                    <div class="map-container">
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3596.539133179265!2d28.17094867539656!3d-25.65342197742211!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1ebfdf5b4bffffff%3A0x6252d76f848c4146!2s287%20Eeufees%20St%2C%20Pretoria%20North%2C%20Pretoria%2C%200182!5e0!3m2!1sen!2sza!4v1672584144585!5m2!1sen!2sza" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-contact">
+                <h3>Contact Us</h3>
+                <p>
+                    No. 287 Eeufees Street<br>
+                    Pretoria North
+                </p>
+                <p>
+                    <strong>Email:</strong> 
+                    <a href="mailto:zoelifeacademy4kidz@gmail.com">zoelifeacademy4kidz@gmail.com</a>
+                </p>
+                <p>
+                    <strong>Cell/WhatsApp:</strong> 
+                    <a href="tel:0839478372">083 947 8372</a>
+                </p>
+            </div>
+            <div class="footer-links">
+                <h3>Quick Links</h3>
+                <ul>
+                    <li><a href="admissions.html">Admissions Process</a></li>
+                    <li><a href="resources.html">School Calendar</a></li>
+                    <li><a href="documents/2026%20Welcome%20Pack.docx" download="2026 Welcome Pack.docx">Parent Handbook</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2025 Zoe Life Academy for Kidz. All Rights Reserved.</p>
+        </div>
+    </footer>
+    </footer>
+
+
+    <!-- Web3Forms Handler -->
+    <script>
+    (function(){
+        const form = document.getElementById('contactForm');
+        const formMessage = document.getElementById('formMessage');
+        
+        if(!form) return;
+
+        form.addEventListener('submit', async function(e){
+            e.preventDefault();
+            
+            const submitBtn = form.querySelector('button[type="submit"]');
+            submitBtn.disabled = true;
+            submitBtn.textContent = 'Sending...';
+
+            try {
+                const formData = new FormData(form);
+                
+                const response = await fetch('https://api.web3forms.com/submit', {
+                    method: 'POST',
+                    body: formData
+                });
+
+                const data = await response.json();
+
+                if(data.success){
+                    showMessage('Thank you! Your message has been sent successfully. We will get back to you soon.', 'success');
+                    form.reset();
+                    
+                    // Clear success message after 5 seconds
+                    setTimeout(function(){
+                        formMessage.style.display = 'none';
+                    }, 5000);
+                } else {
+                    showMessage('Something went wrong. Please try again or contact us directly.', 'error');
+                }
+            } catch(error){
+                showMessage('Failed to send message. Please try again later.', 'error');
+                console.error('Error:', error);
+            } finally {
+                submitBtn.disabled = false;
+                submitBtn.textContent = 'Send Message';
+            }
+        });
+
+        function showMessage(text, type){
+            formMessage.textContent = text;
+            formMessage.style.display = 'block';
+            
+            if(type === 'success'){
+                formMessage.style.backgroundColor = '#d4edda';
+                formMessage.style.color = '#155724';
+                formMessage.style.border = '1px solid #c3e6cb';
+            } else {
+                formMessage.style.backgroundColor = '#f8d7da';
+                formMessage.style.color = '#721c24';
+                formMessage.style.border = '1px solid #f5c6cb';
+            }
+        }
+    })();
+    </script>
+
+    </body>
+</html>
