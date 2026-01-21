@@ -417,7 +417,7 @@ footer ul {
 
 /* Contact page: use contact image with dark overlay for readable text */
 .page-header.contact-header {
-    background-image: linear-gradient(rgba(0,0,0,0.45), rgba(0,0,0,0.45)), url("images/contact us image.jpeg");
+    background-image: linear-gradient(rgba(0,0,0,0.45), rgba(0,0,0,0.45)), url("images/contact-us-image.jpeg");
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
