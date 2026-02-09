@@ -222,13 +222,20 @@
                 alert('Please answer all questions before seeing results.');
                 return;
             }
-            let level='';
-            if(total <= 6) level = 'Low likelihood of neurodivergent traits.';
-            else if(total <= 13) level = 'Moderate likelihood — consider monitoring and discussing with your paediatrician.';
-            else level = 'Higher likelihood — please seek professional assessment for a formal evaluation.';
+            let level='', guidance='';
+            if(total <= 6) {
+                level = 'Low likelihood of neurodivergent traits.';
+                guidance = 'Your responses suggest typical development. If you still have concerns, we\'re here to help provide guidance and support.';
+            } else if(total <= 13) {
+                level = 'Moderate likelihood — consider monitoring and contacting us for further evaluation.';
+                guidance = 'We recommend reaching out to Zoe Life Academy for a professional developmental screening. Our team can provide specialized support and guidance tailored to your child\'s needs.';
+            } else {
+                level = 'Higher likelihood — we encourage you to contact us for a comprehensive assessment.';
+                guidance = 'Please reach out to Zoe Life Academy as soon as possible. Our experienced team can conduct a formal evaluation and discuss specialized programs that can help your child thrive.';
+            }
             resultBox.classList.remove('hidden');
             resultBox.innerHTML = '<h3>Result</h3><p><strong>Score:</strong> '+total+' / 20</p><p>'+level+'</p>' +
-                '<p class="result-text">If you are concerned, consider requesting a developmental screening from your healthcare provider or contacting local therapists for further guidance.</p>';
+                '<p class="result-text">'+guidance+'</p>';
             resultBox.scrollIntoView({behavior:'smooth'});
         });
 
