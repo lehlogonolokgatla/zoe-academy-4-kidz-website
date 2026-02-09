@@ -266,7 +266,10 @@ nav a:hover, nav a.active {
 .test-form .radio-row label { background: rgba(255,255,255,0.06); padding:8px 12px; border-radius:8px; cursor:pointer; display:flex; align-items:center; gap:8px; }
 .test-form input[type="radio"] { transform:scale(1.1); margin-right:6px; }
 .result-box { background:#fff; padding:18px; border-radius:8px; box-shadow:0 6px 18px rgba(0,0,0,0.06); }
+.result-box.hidden { display: none; margin-top: 20px; }
 .test-form label { display:block; font-weight:600; }
+
+.test-container { padding: 30px 20px; }
 
 .test-controls { display:flex; gap:10px; justify-content:center; margin-top:8px; }
 .test-controls button { padding:10px 14px; border-radius:8px; border:0; cursor:pointer; font-weight:600; }
@@ -274,6 +277,31 @@ nav a:hover, nav a.active {
 .test-controls .btn-print { background:var(--primary-blue); color:#fff; }
 .progress { height:10px; background:#eee; border-radius:6px; overflow:hidden; margin:12px 0; }
 .progress > i { display:block; height:100%; background:linear-gradient(90deg,var(--primary-blue),var(--primary-orange)); width:0%; }
+.progress-bar { width: 0%; }
+
+.test-disclaimer {
+    margin-top: 18px;
+    font-size: 0.95rem;
+    color: #444;
+}
+
+.test-disclaimer.center {
+    text-align: center;
+    margin-top: 12px;
+}
+
+.test-actions {
+    text-align: center;
+    margin-top: 12px;
+}
+
+.test-actions .cta-button {
+    margin-right: 10px;
+}
+
+.result-text {
+    margin-top: 8px;
+}
 
 /* --- Testimonials Section --- */
 .testimonials {
@@ -377,11 +405,44 @@ footer ul {
     list-style: none;
 }
 
+.footer-social .social-links {
+    display: flex;
+    gap: 15px;
+    margin-top: 10px;
+}
+
+.footer-social .social-links a {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    background-color: rgba(255, 255, 255, 0.1);
+    border-radius: 50%;
+    transition: all 0.3s ease;
+}
+
+.footer-social .social-links a:hover {
+    background-color: var(--primary-pink);
+    transform: translateY(-3px);
+}
+
+.footer-social .social-links svg {
+    width: 20px;
+    height: 20px;
+}
+
 .footer-bottom {
     border-top: 1px solid #444;
     text-align: center;
     padding: 20px 0;
     font-size: 0.9rem;
+}
+
+.footer-bottom .designer-credit {
+    margin-top: 5px;
+    font-size: 0.85rem;
+    opacity: 0.8;
 }
 
 /* --- Responsive Design --- */
@@ -436,6 +497,10 @@ footer ul {
     footer .container {
         flex-direction: column;
         text-align: center;
+    }
+
+    .footer-social .social-links {
+        justify-content: center;
     }
 }
 
